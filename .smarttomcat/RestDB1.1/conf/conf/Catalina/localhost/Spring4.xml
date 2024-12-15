@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context docBase="D:/IT/java/Java проекты/Spring4/src/main/webapp">
+  <Resources cacheMaxSize="10240">
+    <PreResources base="D:/IT/java/Java проекты/Spring4/target/classes" className="org.apache.catalina.webresources.DirResourceSet" webAppMount="/WEB-INF/classes"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-core/6.1.10/spring-core-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-core-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-jcl/6.1.10/spring-jcl-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-jcl-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-context/6.1.10/spring-context-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-context-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-aop/6.1.10/spring-aop-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-aop-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-beans/6.1.10/spring-beans-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-beans-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-expression/6.1.10/spring-expression-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-expression-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/io/micrometer/micrometer-observation/1.12.7/micrometer-observation-1.12.7.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/micrometer-observation-1.12.7.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/io/micrometer/micrometer-commons/1.12.7/micrometer-commons-1.12.7.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/micrometer-commons-1.12.7.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-context-support/6.1.10/spring-context-support-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-context-support-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-context-indexer/6.1.10/spring-context-indexer-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-context-indexer-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-web/6.1.10/spring-web-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-web-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/springframework/spring-webmvc/6.1.10/spring-webmvc-6.1.10.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/spring-webmvc-6.1.10.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/thymeleaf/thymeleaf-spring6/3.1.2.RELEASE/thymeleaf-spring6-3.1.2.RELEASE.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/thymeleaf-spring6-3.1.2.RELEASE.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/thymeleaf/thymeleaf/3.1.2.RELEASE/thymeleaf-3.1.2.RELEASE.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/thymeleaf-3.1.2.RELEASE.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/attoparser/attoparser/2.0.7.RELEASE/attoparser-2.0.7.RELEASE.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/attoparser-2.0.7.RELEASE.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar"/>
+    <PostResources base="C:/Users/dima_/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/slf4j-api-2.0.13.jar"/>
+  </Resources>
+</Context>

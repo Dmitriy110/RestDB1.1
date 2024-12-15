@@ -1,0 +1,11 @@
+org\example\service\impl\PostServiceImplTest.class
+org\example\servlet\mapper\UserDtoMapperTest.class
+org\example\repository\mapper\PostResultSetMapperImplTest.class
+org\example\servlet\UserServletTest.class
+org\example\db\ConnectionManagerImplTest.class
+org\example\service\impl\UserServiceImplTest.class
+org\example\servlet\PostServletTest.class
+org\example\repository\impl\PostEntityRepositoryImplTest.class
+org\example\servlet\mapper\PostDtoMapperTest.class
+org\example\repository\mapper\UserResultSetMapperImplTest.class
+org\example\repository\impl\UserRepositoryImplTest.class
