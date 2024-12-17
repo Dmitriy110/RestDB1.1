@@ -74,12 +74,6 @@ public class PostServiceImplTest {
     }
 
     @Test
-    void createTable() {
-        postService.createTable();
-        verify(postRepository).createTable();
-    }
-
-    @Test
     void deleteById_postExists() {
         UUID testUUID = UUID.randomUUID();
         when(postRepository.deleteById(testUUID)).thenReturn(true);

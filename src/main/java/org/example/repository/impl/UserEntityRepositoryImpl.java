@@ -113,32 +113,4 @@ public class UserEntityRepositoryImpl implements UserEntityRepository {
             throw new RuntimeException("Ошибка сохранения user: " + user, e);
         }
     }
-
-    @Override
-    public void createTable() {
-        String sql = """
-                CREATE TABLE IF NOT EXISTS users (
-                    id UUID PRIMARY KEY,
-                    name VARCHAR(255),
-                    email VARCHAR(255)
-                )
-                """;
-        String sqlCheckTable = "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = 'users')";
-
-        try (Connection connection = dataSource.getConnection();
-             Statement statement = connection.createStatement()) {
-            ResultSet rs = statement.executeQuery(sqlCheckTable);
-            rs.next(); //  Перемещаем курсор на первую (и единственную) строку
-            boolean tableExists = rs.getBoolean(1); // Извлекаем булево значение
-
-            if (!tableExists) {
-                statement.execute(sql);
-                System.out.println("Таблица users создана");
-            } else {
-                System.out.println("Таблица users уже существует");
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException("Ошибка при создании таблицы users: ", e);
-        }
-    }
 }

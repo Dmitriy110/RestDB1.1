@@ -73,7 +73,6 @@ class PostServletTest {
 
     @Test
     void doPost_postCreated() throws IOException, ServletException {
-        // Arrange
         Gson gson = new Gson();
         String jsonRequest = """
             {
@@ -87,7 +86,6 @@ class PostServletTest {
         Post mockPost = PostDtoMapper.INSTANCE.incomingDtoToPost(incomingDtoPost);
         Post savedPost = new Post(UUID.randomUUID(), mockPost.getTitle(), mockPost.getContent(), mockPost.getUserId());
 
-        //Подготавливаем моки
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(jsonRequest.getBytes());
         BufferedReader reader = new BufferedReader(new InputStreamReader(byteArrayInputStream));
         when(mockRequest.getReader()).thenReturn(reader);

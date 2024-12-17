@@ -11,5 +11,4 @@ public interface Repository<T, K> {
 
     T save(T t);
 
-    void createTable();
 }

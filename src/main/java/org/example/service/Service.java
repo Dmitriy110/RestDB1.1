@@ -11,7 +11,5 @@ public interface Service<T> {
 
     List<T> findAll();
 
-    void createTable();
-
     boolean deleteById(UUID id);
 }

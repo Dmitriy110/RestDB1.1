@@ -22,8 +22,6 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class UserServletTest {
-    // мокаем сервис и другие зависимости
-    // проевряем логику роута на нужные метода
     @Mock
     private Service<User> mockService;
 

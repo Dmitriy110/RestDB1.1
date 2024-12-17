@@ -74,12 +74,6 @@ class UserServiceImplTest {
     }
 
     @Test
-    void createTable() {
-        userService.createTable();
-        verify(userRepository).createTable();
-    }
-
-    @Test
     void deleteById_userExists() {
         UUID testUUID = UUID.randomUUID();
         when(userRepository.deleteById(testUUID)).thenReturn(true);

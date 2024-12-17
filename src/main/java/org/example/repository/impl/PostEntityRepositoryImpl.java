@@ -81,33 +81,4 @@ public class PostEntityRepositoryImpl implements PostEntityRepository {
             throw new RuntimeException("Ошибка сохранения поста: " + post, e);
         }
     }
-
-    @Override
-    public void createTable() {
-        String sql = """
-            CREATE TABLE IF NOT EXISTS posts (
-                id UUID PRIMARY KEY,
-                title VARCHAR(255),
-                content VARCHAR(255),
-                user_id UUID, FOREIGN KEY (user_id) REFERENCES users(id)
-            )
-            """;
-        String sqlCheckTable = "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = 'posts')";
-
-        try (Connection connection = dataSource.getConnection();
-             Statement statement = connection.createStatement()) {
-            ResultSet rs = statement.executeQuery(sqlCheckTable);
-            rs.next(); //  Перемещаем курсор на первую (и единственную) строку
-            boolean tableExists = rs.getBoolean(1); // Извлекаем булево значение
-
-            if (!tableExists) {
-                statement.execute(sql);
-                System.out.println("Таблица posts создана");
-            } else {
-                System.out.println("Таблица posts уже существует");
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException("Ошибка при создании таблицы posts: ", e);
-        }
-    }
 }

@@ -25,8 +25,5 @@ public class PostServiceImpl implements Service<Post> {
     public List<Post> findAll() { return postRepository.findAll(); }
 
     @Override
-    public void createTable() { postRepository.createTable(); }
-
-    @Override
     public boolean deleteById(UUID id) { return postRepository.deleteById(id); }
 }

@@ -27,9 +27,6 @@ public class UserServiceImpl implements Service<User> {
     public List<User> findAll() { return userRepository.findAll(); }
 
     @Override
-    public void createTable() { userRepository.createTable(); }
-
-    @Override
     public boolean deleteById(UUID id) { return userRepository.deleteById(id); }
 
 }

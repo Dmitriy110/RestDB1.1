@@ -1,6 +1,5 @@
 package org.example.servlet;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -9,7 +8,6 @@ import org.example.model.User;
 import org.example.service.Service;
 import org.example.servlet.dto.IncomingDtoUser;
 import com.google.gson.Gson;
-import org.example.servlet.dto.OutGoingDtoUser;
 import org.example.servlet.mapper.UserDtoMapper;
 
 import java.io.IOException;
@@ -25,25 +23,23 @@ public class UserServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        UUID uuid = UUID.fromString(req.getParameter("id"));// Our Id from request/Our Id random
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        UUID uuid = UUID.fromString(req.getParameter("id"));
         User byId = service.findById(uuid);
         if(byId != null) {
-            OutGoingDtoUser outGoingDtoUser = UserDtoMapper.INSTANCE.userToOutGoingDto(byId);
             Gson gson = new Gson();
             resp.setContentType("application/json");
-            resp.getWriter().write(gson.toJson(outGoingDtoUser));
+            resp.getWriter().write(gson.toJson(UserDtoMapper.INSTANCE.userToOutGoingDto(byId)));
         } else {
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Gson gson = new Gson();
         IncomingDtoUser incomingDtoUser = gson.fromJson(req.getReader(), IncomingDtoUser.class);
-        User user = UserDtoMapper.INSTANCE.incomingDtoToUser(incomingDtoUser);
-        User savedUser = service.save(user);
+        User savedUser = service.save(UserDtoMapper.INSTANCE.incomingDtoToUser(incomingDtoUser));
         resp.setStatus(HttpServletResponse.SC_CREATED);
         resp.getWriter().write(gson.toJson(UserDtoMapper.INSTANCE.userToOutGoingDto(savedUser)));
     }
